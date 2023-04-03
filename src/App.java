@@ -1,4 +1,6 @@
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -35,6 +37,13 @@ List<Map<String, String>> listaDeFilmes = parser.parse(body);
 
 //Passo 3 - Exibir e manipular os dados na ide
 for (Map<String,String> filme : listaDeFilmes) { //for --> Para essa lista eu quero que imprima as informações que descrevi abaixo
+    URL inputStream = new URL (urlImagem).openStream();
+   
+   
+   
+   
+   
+   
     System.out.println("\n\nFilme: " + "\u001b[1m" +filme.get("title") + "\u001b[m");
     System.out.println("Link da Imagem: " + "\u001b[4m" + filme.get("image") + "\u001b[m");
     
